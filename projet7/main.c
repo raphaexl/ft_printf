@@ -8,7 +8,7 @@ char	*ft_double_array(t_double *n);
 int main(void)
 {
 	t_double d;
-	double	val = 9.08971;
+	double	val = 1444565444646.6465424242242;
 	d.d = val;
 	//ft_printf("ft_printf Hello World\n%f\n", val);
 	ft_printf("%s\n",ft_double_array(&d));

@@ -6,7 +6,7 @@
 /*   By: fel-hita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 17:23:24 by fel-hita          #+#    #+#             */
-/*   Updated: 2019/02/27 23:14:50 by ebatchas         ###   ########.fr       */
+/*   Updated: 2019/03/13 00:55:30 by ebatchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ char	*ft_double_cal(t_double *d)
 	if (d->data.sign)
 		final = ft_strjoin("-", final);
 	//printf("i will return : %s\n",final);
+	ft_putchar('\n');
+	ft_putstr("debug : ");
+	ft_putstr(final);
+	ft_putchar('\n');
+	exit(0);
 	return (final);
 }
 
@@ -121,6 +126,11 @@ char	*ft_l_double_cal(t_l_double *d)
 	//ft_putstr("\nfinal fraction : ");
 	if (d->data.sign)
 		final = ft_strjoin("-", final);
+	ft_putchar('\n');
+	ft_putstr("debug : ");
+	ft_putstr(final);
+	ft_putchar('\n');
+	exit(0);
 	//printf("i will return : %s\n",final);
 	return (final);
 }

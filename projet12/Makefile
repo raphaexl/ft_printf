@@ -6,7 +6,7 @@
 #    By: ebatchas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/15 17:36:55 by ebatchas          #+#    #+#              #
-#    Updated: 2019/03/12 01:50:10 by ebatchas         ###   ########.fr        #
+#    Updated: 2019/03/12 13:25:02 by ebatchas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,7 @@ clean:
 
 fclean: clean
 	make fclean -C $(LIBDIR)/libft
+	rm -rf $(LIBDIR)/libft.a
 	rm -rf $(BINDIR)/$(NAME)
 
 re: fclean all

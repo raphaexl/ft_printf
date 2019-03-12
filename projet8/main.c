@@ -16,13 +16,13 @@ int main(void)
 	//double			val = 7.31960296494528966981362954694E-304;
 	//double		val2 = 5.5626846514486572442618911564E-309;
 	//int	val2 = 625;
-	//d.d = val;
-	char	*val = "hello World";
+	t_double d;
+	double x;
+	x = 1444565444646.646484;
+	d.d = x;
 	//printf("\n--------Lf-------\n");
-	//ft_printf("%s\n",ft_l_double_cal(&d));
+	ft_printf("%s\n",ft_double_cal(&d));
 //	printf("----ft_printf--\n");
-	ft_printf("ft_printf : %-50.6s\n",val);
-	printf("printf    : %-50.6s\n", val);
 	//printf("------printf----\n");
 	//printf("%.00Lf\n",val);
 	//ft_l_double_cal(&d);
