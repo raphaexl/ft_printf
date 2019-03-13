@@ -23,8 +23,10 @@ int main(void)
 	//printf("\n--------Lf-------\n");
 	 //printf("{d}\n");
 	// ft_printf("{d}\n");
-	printf("|%f||%F|\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
-	ft_printf("|%f||%F|\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
+	/*printf("|%f||%F|\n", 1.42, 1.42);
+	ft_printf("|%f||%F|\n", 1.42, 1.42);*/
+	printf("{red}|%f||%F|{eoc}\n", 14446.665, 1446.64654);
+	ft_printf("{b_reed}|%f|{eoc}{f_yellow}|%F|{eoc}\n", 14446.665, 1446.64654);
 	/*int n1 = ft_printf("ft_printf : %-+*.*jd\n",12, 2, val2);
 	int n2 = printf("printf    : %+-*.*jd\n",12, 2,  val2);
 	printf("Result : %d\n %d\n", n1, n2);

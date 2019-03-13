@@ -6,7 +6,7 @@
 /*   By: ebatchas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/09 12:05:39 by ebatchas          #+#    #+#             */
-/*   Updated: 2019/03/09 13:03:07 by ebatchas         ###   ########.fr       */
+/*   Updated: 2019/03/13 14:06:26 by ebatchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_get_float_signed(t_conv *conv, va_list ap)
 		if (conv->modif == L)
 			return (ft_double(va_arg(ap, double)));
 		else
-			return (ft_double((float)va_arg(ap, double)));
+			return (ft_double(va_arg(ap, double)));
 	}
 	else
 		return (ft_ldouble(va_arg(ap, long double)));

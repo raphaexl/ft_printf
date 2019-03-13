@@ -6,7 +6,7 @@
 /*   By: ebatchas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 18:09:03 by ebatchas          #+#    #+#             */
-/*   Updated: 2019/03/13 00:37:58 by ebatchas         ###   ########.fr       */
+/*   Updated: 2019/03/13 14:37:43 by ebatchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,14 @@ char			*ft_strrightjoin(char *str, char *buffer, int width)
 	return (buffer);
 }
 
-char			*ft_precision_algo(char *str, int prec)
+char			*ft_precision_algo(char *str, int pos)
 {
 	size_t		i;
 	size_t		len;
 
-	i = prec + 2;
+	i =  pos + 1;
 	len = ft_strlen(str);
-	if (i < len)
+	if (i - 1 < len)
 	{
 		if (str[i] != '5')
 		{
@@ -108,9 +108,9 @@ char			*ft_precision_algo(char *str, int prec)
 					break ;
 			}
 			if (i < len && str[i] > '5')
-				str[prec + 1] = str[prec + 1] + 1;
+				str[pos + 1] = str[pos + 1] + 1;
 			else
-				str[prec + 1] = !(str[prec] % 2);
+				str[pos + 1] = !(str[pos] % 2);
 		}
 	}
 	return (str);
@@ -122,17 +122,14 @@ char			*ft_handle_precision(char *buffer, int prec)
 	char	*temp;
 	char	*p;
 
-	ft_putendl(buffer);
-	exit(0);
 	if (!(p = ft_strchr(buffer, '.')))
 		return (buffer);
-	buffer = ft_precision_algo(buffer, prec);
 	len = prec - ft_strlen(p + 1);
 	if (len <= 0)
 	{
 		len = ft_strlen(buffer) - ft_strlen(p);
 		temp = ft_strsub(buffer, 0, len);
-		return (ft_strjoin(temp, prec ? ft_strsub(p, 0, prec + 1) : NULL));
+		return (ft_strjoin(temp, prec ? ft_precision_algo(ft_strsub(p, 0, prec + 1), prec - 1) : NULL));
 	}
 	buffer = ft_strjoin(buffer, ft_newstr('0', len));
 	return (buffer);

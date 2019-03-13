@@ -6,7 +6,7 @@
 /*   By: ebatchas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 17:57:08 by ebatchas          #+#    #+#             */
-/*   Updated: 2019/03/13 00:41:55 by ebatchas         ###   ########.fr       */
+/*   Updated: 2019/03/13 14:10:22 by ebatchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ void			ft_print_float_conv(t_conv *conv, va_list ap)
 	ft_check_alias(conv);
 	conv->modif = NONE;
 	buffer = ft_get_float_signed(conv, ap);
-	ft_putendl(buffer);
-	exit(0);
 	if (buffer[0] == '-')
 		conv->sign = '-';
 	else if (conv->flag->plus)
